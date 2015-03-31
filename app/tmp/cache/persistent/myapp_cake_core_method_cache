@@ -1,2 +1,0 @@
-1427841322
-a:3:{i:0;b:0;s:4:"name";a:5:{s:32:"48e062b213fcf3538fb8d7b578893554";s:10:"`domotics`";s:32:"47eb7bb09414c64f779510914712b6ee";s:7:"`count`";s:32:"50276d9773e4fc89f48cafe8ef999539";s:15:"`terminal_type`";s:32:"e466755659ed6d09586ecafcd8e58bdb";s:19:"`TerminalType`.`id`";s:32:"1ee456979e37c9aaa449240776014e7a";s:14:"`TerminalType`";}s:6:"fields";a:1:{s:32:"a6649b5ed30e9dc412ac866a5260b5b4";a:1:{i:0;s:19:"COUNT(*) AS `count`";}}}
