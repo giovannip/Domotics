@@ -284,28 +284,16 @@
 
             <!--main content start-->
             <section id="main-content">
-                <section class="wrapper site-min-height">
-                    <div class="row mt">
-                        <div class="col-lg-12">
-                            <?php echo $this->fetch('content'); ?>
-                        </div>
-                    </div>
+                <section class="wrapper">
+                    <?php echo $this->fetch('content'); ?>
+                </section>
+            </section>
+            
+            <!-- /MAIN CONTENT -->
 
-                </section><! --/wrapper -->
-            </section><!-- /MAIN CONTENT -->
 
-            <!--main content end-->
-            <!--footer start-->
-            <footer class="site-footer">
-                <div class="text-center">
-                    2014 - Alvarez.is
-                    <a href="blank.html#" class="go-top">
-                        <i class="fa fa-angle-up"></i>
-                    </a>
-                </div>
-            </footer>
             <?php echo $this->element('sql_dump'); ?>
-            <!--footer end-->
+
         </section>
 
         <!-- js placed at the end of the document so the pages load faster -->

@@ -1,46 +1,38 @@
-<div class="users view row">
-	<div class="actions span2">
-		<ul class="nav nav-list">
-			<li class="nav-header"><?php echo __('Actions'); ?></li>
-					<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
-		</ul>
-	</div>
-	<div class="span10">
-		<h2><?php  echo __('User');?></h2>
-		<dl>
-					<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Username'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['username']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Password'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['password']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Role'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['role']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['modified']); ?>
-			&nbsp;
-		</dd>
-		</dl>
-	</div>
+<h2><i class="fa fa-angle-right"></i> View User</h2>
+
+<div class="content-panel">
+    <div class="col-lg-12">
+<br>
+
+        <table class="table table-bordered table-striped table-condensed cf">
+            <tr>
+                <td><?php echo __('Id'); ?></td>
+                <td><?php echo h($user['User']['id']); ?></td>
+            </tr>
+            <tr>
+                <td><?php echo __('Username'); ?></td>
+                <td><?php echo h($user['User']['username']); ?></td>
+            </tr>
+            <tr>
+                <td><?php echo __('Password'); ?></td>
+                <td><?php echo h($user['User']['password']); ?></td>
+            </tr>
+            <tr>
+                <td><?php echo __('Role'); ?></td>
+                <td><?php echo h($user['User']['role']); ?></td>
+            </tr>
+            <tr>
+                <td><?php echo __('Created'); ?></td>
+                <td><?php echo h($user['User']['created']); ?></td>
+            </tr>
+            <tr>
+                <td><?php echo __('Modified'); ?></td>
+                <td><?php echo h($user['User']['modified']); ?></td>
+            </tr>
+            <tr>
+        </table>
+
+    </div>
+
+    <?php echo $this->Html->link(__('Back'), array('action' => 'index'), array('class' => 'btn btn-cancel')); ?>
 </div>
