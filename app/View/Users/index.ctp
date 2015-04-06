@@ -1,7 +1,7 @@
-<h2><i class="fa fa-angle-right"></i> <?php echo __('Users'); ?></h2>
+<h2><i class="fa fa-angle-right"></i> Users</h2>
 <div class="content-panel">
     <div class="col-lg-12">
-
+        <br>
         <table class="table table-bordered table-striped table-condensed cf">
             <tr>
                 <th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -19,27 +19,32 @@
                             <div class="btn-group">
                                 <?php echo $this->Html->link(__('V'), array('action' => 'view', $user['User']['id']), array('class' => 'btn btn-info  btn-sm')); ?>
                                 <?php echo $this->Html->link(__('E'), array('action' => 'edit', $user['User']['id']), array('class' => 'btn btn-success  btn-sm')); ?>
-                                <?php echo $this->Form->postLink(__('D'), array('action' => 'delete', $user['User']['id']), array('class' => 'btn btn-danger  btn-sm'), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+                                <?php echo $this->Form->postLink(__('D'), array('action' => 'delete', $user['User']['id']), array('class' => 'btn btn-danger  btn-sm'), __('Are you sure you want to delete "%s"?', $user['User']['username'])); ?>
                             </div>
                         </div>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </table>
-
-        <div class="well">
-            <?php
-            echo $this->Paginator->counter(array(
-                'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-            ));
-            ?>	</div>
-
-        <div class="paging btn-group">
-            <?php
-            echo $this->Paginator->prev('< ' . __('previous'), array('class' => 'prev btn'), null, array('class' => 'prev disabled btn'));
-            echo $this->Paginator->numbers(array('separator' => '', 'class' => 'btn', 'currentClass' => 'active'));
-            echo $this->Paginator->next(__('next') . ' >', array('class' => 'next btn'), null, array('class' => 'next disabled btn'));
-            ?>
-        </div>
     </div>
+    <div class="well">
+        <?php
+        echo $this->Paginator->counter(array(
+            'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+        ));
+        ?>	
+    </div>
+
+    <div class="paging btn-group">
+        <?php
+        echo $this->Paginator->prev('< ' . __('previous'), array('class' => 'prev btn'), null, array('class' => 'prev disabled btn'));
+        echo $this->Paginator->numbers(array('separator' => '', 'class' => 'btn', 'currentClass' => 'active'));
+        echo $this->Paginator->next(__('next') . ' >', array('class' => 'next btn'), null, array('class' => 'next disabled btn'));
+        ?>
+    </div>
+
 </div>
+<script type="text/javascript"> 
+    $('#menu-users').addClass('active');
+    $('#menu-users-list').addClass('active');
+</script>

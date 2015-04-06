@@ -4,7 +4,7 @@
 class UsersController extends AppController {
 
     public function beforeFilter() {
-        parent::beforeFilter();
+        //parent::beforeFilter();
         $this->Auth->allow('add', 'logout', 'loggedout');
     }
 
@@ -20,8 +20,8 @@ class UsersController extends AppController {
     public function logout() {
         $this->redirect($this->Auth->logout());
     }
-    
-    public function loggedout(){
+
+    public function loggedout() {
         //do nothing
     }
 

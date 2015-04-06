@@ -1,25 +1,34 @@
-<div class="users row">
-<div class="actions span2">
-	<ul class="nav nav-list">
-        <li class="nav-header"><?php echo __('Actions'); ?></li>
+<h2><i class="fa fa-angle-right"></i> Edit User</h2>
+<div class="form-panel">
+    <?php echo $this->Form->create('User', array('class' => 'form-horizontal style-form')); ?>
 
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index'));?></li>
-	</ul>
+    <?php
+    echo $this->Form->input('id');
+    ?>
+    <div class="form-group">
+        <?php
+        echo $this->Form->input('username', array('class' => 'form-control', 'label' => array('class' => 'col-sm-2'), 'div' => array('class' => 'col-sm-2')));
+        ?>
+    </div>
+    <div class="form-group">
+        <?php
+        echo $this->Form->input('password', array('class' => 'form-control', 'label' => array('class' => 'col-sm-2'), 'div' => array('class' => 'col-sm-2')));
+        ?>
+    </div>
+    <div class="form-group">
+        <?php
+        echo $this->Form->input('role', array('class' => 'form-control', 'label' => array('class' => 'col-sm-2'), 'div' => array('class' => 'col-sm-2')));
+        ?>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-4">
+            <?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-primary', 'div' => false)); ?>
+            <?php echo $this->Html->link(__('Cancel'), array('action' => 'index'), array('class' => 'btn btn-cancel')); ?>
+        </div>
+    </div>
+    <?php echo $this->Form->end(); ?>
 </div>
-<div class="users span10">
-<?php echo $this->Form->create('User', array('class' => 'form-horizontal'));?>
-	<fieldset>
-		<legend><?php echo __('Add User'); ?></legend>
-	<?php
-		echo $this->Form->input('username');
-		echo $this->Form->input('password');
-		echo $this->Form->input('role');
-	?>
-		<div class="form-actions">
-<?php echo $this->Form->submit(__('Submit'),array('class'=>'btn btn-primary','div'=>false));?>
-<?php echo $this->Html->link(__('Cancel'),array('controller' => '', 'action' => 'index'),array('class'=>'btn btn-cancel'));?>
-		</div>
-		</fieldset>
-<?php echo $this->Form->end();?>
-</div>
-</div>
+<script type="text/javascript"> 
+    $('#menu-users').addClass('active');
+    $('#menu-users-add').addClass('active');
+</script>

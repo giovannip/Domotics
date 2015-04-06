@@ -28,3 +28,6 @@
     </div>
     <?php echo $this->Form->end(); ?>
 </div>
+<script type="text/javascript"> 
+    $('#menu-users').addClass('active');
+</script>

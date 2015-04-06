@@ -2,7 +2,7 @@
 
 <div class="content-panel">
     <div class="col-lg-12">
-<br>
+        <br>
 
         <table class="table table-bordered table-striped table-condensed cf">
             <tr>
@@ -36,3 +36,6 @@
 
     <?php echo $this->Html->link(__('Back'), array('action' => 'index'), array('class' => 'btn btn-cancel')); ?>
 </div>
+<script type="text/javascript"> 
+    $('#menu-users').addClass('active');
+</script>

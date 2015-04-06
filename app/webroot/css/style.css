@@ -257,7 +257,7 @@ ul.top-menu > li > .logout {
     height:17px;
     width:17px;
     display:inline-block;
-    background: url("../img/nav-expand.png") no-repeat top;
+    //background: url("../img/nav-expand.png") no-repeat top;
     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -266,7 +266,7 @@ ul.top-menu > li > .logout {
     top:15px;
 }
 .active .dcjq-icon {
-    background: url("../img/nav-expand.png") no-repeat bottom;
+    //background: url("../img/nav-expand.png") no-repeat bottom;
     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -1781,8 +1781,8 @@ label {
 
 /* TOGGLE CONFIGURATION */
 .has-switch {
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
     display: inline-block;
     cursor: pointer;
     line-height: 1.231;
